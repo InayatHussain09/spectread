@@ -1,0 +1,21 @@
+[project]
+name = "spectread"
+version = "2.0.0"
+description = "Active Directory attack path framework"
+authors = [{ name = "Inayat Hussain" }]
+requires-python = ">=3.10"
+dependencies = [
+  "impacket>=0.11.0", "ldap3>=2.9.1", "dnspython>=2.4.0", "networkx>=3.1",
+  "pydot>=2.0.0", "pycryptodome>=3.19.0", "pywinrm>=0.4.3",
+]
+
+[project.scripts]
+spectread = "main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["core"]
+py-modules = ["main", "config"]
